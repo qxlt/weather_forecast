@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './output.css'
 import { SearchCity } from './SearchCity.js'
 import { Weather } from './Weather.js';
@@ -12,8 +11,9 @@ function App() {
 
   return (
     <div className='flex justify-center flex-col border-2 border-amber-600 h-screen w-screen'>
-      <h2 className='text-center py-6 assistant-600'>Weather Forecast</h2>
+      <h2 className='text-center py-6 assistant-600 text-3xl'>Weather Forecast</h2>
       <SearchCity onCitySelect={setSelectedCity}/>
+      <h2 className='text-center assistant-600 text-xl'>{selectedCity}</h2>
       <Weather city={selectedCity} />
     </div>
   )
