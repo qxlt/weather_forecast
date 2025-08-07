@@ -8,6 +8,7 @@ import Cloudy from "./assets/cloudy-day.mp4"
 import Rainy from "./assets/rainy.mp4"
 import Clear from "./assets/sunny-day.mp4"
 import Other from "./assets/moon-night.mp4"
+import { Footer } from './Footer.js';
 
 
 // // main
@@ -57,6 +58,7 @@ function App() {
         <SearchCity onCitySelect={setSelectedCity}/>
         <Weather city={selectedCity} weather={setWeather} />
       </div>
+      <Footer />
     </div>
     
   )

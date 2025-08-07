@@ -66,7 +66,7 @@ export function Weather( { city, weather } ) {
         const fetchWeather = async () => {
           try {
             const response = await fetch(
-              `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=694772cb6ff5a4c0ddf6574cdc83f8a6`
+              `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=`
             );
             if (!response.ok) {
               throw new Error('Failed to fetch weather data');

@@ -32,6 +32,7 @@ export function SearchCity( { onCitySelect } ) {
                 Search
                 </button>
             </div>
+            <p className='assistant-400 text-center text-sm'>Due to technical issues, we don't have all the cities included. Click <a href="mailto:liuqx3@gmail.com" className='hover:underline text-pink-400'>here</a> to request adding city you interested</p>
             {/* dropdown suggestions */}
             { value.length > 0 ? 
                  (<div className='w-full flex flex-rol justify-center gap-2'>
