@@ -51,7 +51,16 @@ function App() {
         </video>
         
         <h2 className='assistant-400 absolute inset-0 flex items-center justify-center text-white text-xl font-semibold bg-black/30'>
-          Exploring... {selectedCity}
+          Exploring... 
+          <a
+          href={`https://www.google.com/search?q=${encodeURIComponent(selectedCity)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className='underline hover:bg-gray-600 p-1 rounded-xl hover:opacity-75'
+        >
+          {selectedCity}
+        </a>
+
         </h2>
       </div>
 

@@ -59,6 +59,8 @@ const tempConverter = (temp) => {
     return Math.round(temp - 273.15)
 }
 
+const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+
 
 export function Weather( { city, weather } ) {
     const [weatherData, setWeatherData] = useState(null);
@@ -66,7 +68,7 @@ export function Weather( { city, weather } ) {
         const fetchWeather = async () => {
           try {
             const response = await fetch(
-              `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=`
+              `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=`+apiKey
             );
             if (!response.ok) {
               throw new Error('Failed to fetch weather data');
